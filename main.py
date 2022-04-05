@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from datetime import timedelta
+import tensorflow
 from tensorflow.keras.models import load_model
 from tensorflow import keras
 from streamlit_folium import folium_static
@@ -29,7 +30,7 @@ xgb_pickle.close()
 
 path2 = os.getcwd()
 Project_Path='/Users/nickkarras/PycharmProjects/'
-model = load_model(path2)
+model = tensorflow.keras.models.load_model(model_path)
 #
 def Get_Inputs(Date,Time,Covid,Holidays,temp,humidity):
     Year, Month, Day = Date.year, Date.month, Date.day
