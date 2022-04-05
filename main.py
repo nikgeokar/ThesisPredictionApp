@@ -28,7 +28,7 @@ xgb_pickle.close()
 
 
 Project_Path='/Users/nickkarras/PycharmProjects/'
-model =  keras.models.load_model(model_path)
+#model =  keras.models.load_model(model_path)
 
 #
 def Get_Inputs(Date,Time,Covid,Holidays,temp,humidity):
