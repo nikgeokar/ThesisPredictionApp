@@ -27,9 +27,9 @@ xgb_pickle.close()
 #Standar_Scaller = pickle.load(mfile)
 
 
-
+path2 = os.getcwd()
 Project_Path='/Users/nickkarras/PycharmProjects/'
-model = load_model(model_path)
+model = load_model(path2)
 #
 def Get_Inputs(Date,Time,Covid,Holidays,temp,humidity):
     Year, Month, Day = Date.year, Date.month, Date.day
