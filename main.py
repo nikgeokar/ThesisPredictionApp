@@ -12,8 +12,8 @@ from gsheetsdb import connect
 import pickle
 import requests
 from pathlib import Path
-pkl_path = Path(__file__).parents[1] / 'ThesisPredictionApp/Standar_Scaller.pkl'
-model_path=Path(__file__).parents[1] / 'ThesisPredictionApp/DNN_Regressor'
+pkl_path = Path(__file__).parents[1] / 'thesispredictionapp/Standar_Scaller.pkl'
+model_path=Path(__file__).parents[1] / 'thesispredictionapp/DNN_Regressor'
 # with open(pkl_path, "r") as file:
 #     Length_Train = eval(file.readline())
 
