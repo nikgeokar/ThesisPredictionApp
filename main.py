@@ -12,12 +12,10 @@ from gsheetsdb import connect
 import os
 
 import pickle
-import requests
+
 from pathlib import Path
 pkl_path = Path(__file__).parents[1] / 'thesispredictionapp/Standar_Scaller.pkl'
 model_path=Path(__file__).parents[1] / 'thesispredictionapp/DNN_Regressor'
-# with open(pkl_path, "r") as file:
-#     Length_Train = eval(file.readline())
 
 xgb_pickle = open(pkl_path, 'rb')
 Standar_Scaller = pickle.load(xgb_pickle)
@@ -281,7 +279,7 @@ if st.button('Πρόβλεψη παράνομα κατειλημμένων θέ�
     Data_Frame=Get_Sins(Data_Frame)
     Slots,Distance_Data=GetSlotDistance_Capacity()
     Data_Frame=Get_Final_Dataset(Data_Frame,Distance_Data)
-    Data_Frame=Scaller(Data_Frame)
+    Data_Frame=Scaller(Data_Frame,Standar_Scaller)
     Predictions=Get_Predictions(Data_Frame)
     Parking_Slots=Get_Slots_Info(Predictions,Slots)
     Map_Parking_Slots2=Creat_Map2(Parking_Slots)
