@@ -13,7 +13,7 @@ import pickle
 import requests
 from pathlib import Path
 pkl_path = Path(__file__).parents[1] / 'ThesisPredictionApp/Standar_Scaller.pkl'
-
+model_path=Path(__file__).parents[1] / 'ThesisPredictionApp/DNN_Regressor'
 # with open(pkl_path, "r") as file:
 #     Length_Train = eval(file.readline())
 
@@ -28,7 +28,7 @@ xgb_pickle.close()
 
 
 Project_Path='/Users/nickkarras/PycharmProjects/'
-model =  keras.models.load_model('/Users/nickkarras/PycharmProjects/ThesisPredictionApp/DNN_Regressor')
+model =  keras.models.load_model(model_path)
 
 #
 def Get_Inputs(Date,Time,Covid,Holidays,temp,humidity):
