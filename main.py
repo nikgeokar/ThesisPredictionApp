@@ -29,7 +29,7 @@ xgb_pickle.close()
 path2 = os.getcwd()
 Project_Path='/Users/nickkarras/PycharmProjects/'
 #model = tensorflow.keras.models.load_model('DNN_Regressor')
-model = load_model('my_h5_model.h5')
+model = load_model('my_model.h5')
 #
 def Get_Inputs(Date,Time,Covid,Holidays,temp,humidity):
     Year, Month, Day = Date.year, Date.month, Date.day
